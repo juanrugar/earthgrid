@@ -1,48 +1,91 @@
 <html>
     <head>
-        <title>EarthGird Instances</title>
+        <title>EarthGrid Instances</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device=width, initial scale=1.0" />
         <meta name="author" content="author" />
         <meta name="description" content="desciptión página">
         <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        <h2>Geoweb maps</h2>
-        <div>
-            <p>Geoweb pages showing diferent web projects with geodata and maps</p>
-         
-        </div>
-        <div>
-            <h3>Leaflet.js</h3>
-            <p>Some map samples with the Leaflet.js library</p>
-            <ul>
-                <li>Basic Leaflet</li>
-                <li>Leaflet Geocontrols</li>
-                <li>Leaflet Providers</li>
-                <li>Leaflet Basemap</li>
-                <li>Leaflet OSM Geocoder Plugin</li>
-                <li>Leaflet - (Pharmacies) Searcher</li>
-            </ul>
-        </div>
-        <div>
-            <h3>MapBox GL JS</h3>
-            <p>Projects using MapBox Studio for map publishing and MapBox GL JS</p>
-            <ul>
-                <li>Basic MapBox</li>
-                <li>(Barcelona) Cadastre</li>
-                <li>3D Map</li>
-                <li>StoryMap - (?)</li>
-                <li>3D Tracks</li>
-                <li>MapBox ICGC</li>
-                <li>Maputnik Style</li>
-                <li>MapBox - Customized Style</li>
-                <li>Comparative Map</li>
-                <li>Quakes' Visor</li>
-                <li>Socrata API Metamap</li>
-            </ul>
-        </div>
+        <div class="container">
+            <nav class="navbar navbar-light bg-light">
+                <h2>Geoweb maps</h2>
+                <div>
+                    <p>Geoweb pages showing diferent web projects with geodata and maps</p>
+                
+                </div>
+            </nav>
+            <br>
+            <div class="alert seccion leaflet">
+                <h4>Leaflet.js</h4>
+               <p>Some map samples with the Leaflet.js library</p>
+               <div class="row">
+                <div class="col">
+                    <ul>
+                        <li>Basic Leaflet</li>
+                        <li>Leaflet Geocontrols</li>
+                        <li>Leaflet Providers</li>
+                        <li>Leaflet Basemap</li>
+                        <li>Leaflet OSM Geocoder Plugin</li>
+                        <li>Leaflet - (Pharmacies) Searcher</li>
+                    </ul>
+                 </div>
+                </div>
+            </div>
 
+            <div class="alert seccion mapbox">
+                <h4>MapBox GL JS</h4>
+                    <p>Projects using MapBox Studio for map publishing and MapBox GL JS</p>
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li>Basic MapBox</li>
+                                <li>(Barcelona) Cadastre</li>
+                                <li>3D Map</li>
+                                <li>StoryMap - (?)</li>
+                                <li>3D Tracks</li>
+                                <li>MapBox ICGC</li>
+                                <li>Maputnik Style</li>
+                                <li>MapBox - Customized Style</li>
+                                <li>Comparative Map</li>
+                                <li>Quakes' Visor</li>
+                                <li>Socrata API Metamap</li>
+                            </ul>
+                        </div>
+                    </div>                              
+            </div>
+
+            <div class="alert seccion kepler">
+                <h4>Kepler.Gl</h4>
+                <p>Projects using Kepler .GL</p>
+                <div class="row">
+                  <div class="col">
+                    <ul>
+                      <li>Traffic Accidents in Barcelona (2017)</li>
+                      <li>Comparative Map of Traffic Accidents in Barcelona (2018 - 2019)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="alert seccion apps">
+                <h4>Simple Geoweb Applications</h4>
+                <p>Basic geoweb apps</p>
+                <div class="row">
+                  <div class="col">
+                    <ul>
+                      <li>Girona Cemetery App</li>
+                      <li>Cultural Heritage of Eastern Spain App</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+    </div> <!-- end of container div-->
     </body>
 </html>
