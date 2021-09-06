@@ -1,3 +1,4 @@
+
 <html lang="es">
     <head>
     <title>Leaflet Controls</title>
@@ -23,7 +24,7 @@
                 {center:[39.47, -0.376389],
                 zoom:12});
                 
-                //layers instantiation
+                //BASEMAP layers instantiation
                 esri = L.tileLayer(
                     'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', 
                     {
@@ -41,11 +42,12 @@
                     }
                 ).addTo(map);
                 
+                //OVERLAY layers instantiation
                 terrain = L.tileLayer('http://{s}.tile.stamen.com/terrain-background/{z}/{x}/{y}.png', 
                     {
                     maxZoom: 19,
                     attribution: 'Stamen terrain',
-                    opacity: 0.6,
+                    opacity: 0.5,
                     }).addTo(map);
 
                     
@@ -60,7 +62,9 @@
                     "Terrain (Stamen)": terrain,
                 }
 
-                controlCapas = L.control.layers(baseMaps, overlayMaps, {collapsed:false}).addTo(map);
+                controlCapas = L.control.layers(baseMaps, overlayMaps, {collapsed:true}).addTo(map);
+
+                controlEscala = L.control.scale().addTo(map);
 
 
                 point1 = L.marker([39.474778, -0.376667]);      //declaring a simple marker
@@ -99,21 +103,23 @@
             };
         </script>
     </head>
-    <body onload="init()" > <!-- exec of Leafflet map -->
+    <body onload="init()">     <!-- exec of Leafflet map -->
         <div class="container">
             <nav class="navbar navbar-light bg-light">
-                <h2>Leaflet Visor - geocontrols</h2>
                 <div>
-                    <p>A simple leaflet map with a couple of basemaps and an overlay</p>
+                <h2>Leaflet Visor - geocontrols</h2>
                 
+                    <p>A simple leaflet map with a couple of basemaps and an overlay</p>
                 </div>
-                <ul class="breadcrumb">
-                    <li><a href="index.html">Main Page</a></li>
-                </ul>
+                <div>
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">Main Page</a></li>
+                    </ul>
+                </div>
             </nav>
+       
+             <div id="map"></div>
         </div>
-        <div id="map"></div>
-        <div
     </body>
-    </html>
+</html>
   

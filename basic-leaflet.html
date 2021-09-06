@@ -1,3 +1,4 @@
+
 <html lang="es">
     <head>
     <title>Basic Leaflet</title>
@@ -14,7 +15,7 @@
         <link rel="stylesheet" href="/css/styles.css">
 
         <script>
-            var map, capa1, point1, point2, point3, point4, point5; //variables declaration
+            var map, capa1, controlCapas, point1, point2, point3, point4, point5; //variables declaration
             function init () {      //init function
                 map = L.map("map",      //map object instantation 
                 {center:[39.47, -0.376389],
@@ -26,6 +27,8 @@
                     Attribution: "OSM",
                 });
                 
+                controlCapas = L.control.scale().addTo(map);
+
                 point1 = L.marker([39.474778, -0.376667]);      //declaring a simple marker
                 point2 = L.marker([39.474573, -0.366846]);
                
@@ -65,19 +68,21 @@
     <body onload="init()" > <!-- exec of Leafflet map -->
         <div class="container">
             <nav class="navbar navbar-light bg-light">
-                <h2>Basic Leaflet Visor</h2>
                 <div>
+                    <h2>Basic Leaflet Visor</h2>
                     <p>A simple map with markers created using Leaflet.js</p>
                 </div>
-                <ul class="breadcrumb">
-                    <li><a href="index.html">Main Page</a></li>
-                </ul>
+                <div>
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">Main Page</a></li>
+                    </ul>
+                </div>
             </nav>
+        
+        
+            <div id="map"></div>
         </div>
-        
-        <div id="map"></div>
-           
-        
+            
     </body>
     </html>
   
