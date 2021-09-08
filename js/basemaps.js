@@ -78,7 +78,7 @@ function init () {      //init function
         attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Map style: &copy; <a href="https://blog.safecast.org/about/">SafeCast</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
     });
 
-    /*layer groups of points of interest
+    //layer groups of points of interest
     
     var downtown = L.marker([39.474778, -0.376667]).bindPopup('Valencia Downtown'),      //declaring a simple marker
     river = L.marker([39.474573, -0.366846]).bindPopup('River Turia');
@@ -96,8 +96,9 @@ function init () {      //init function
         color: '#ffffff',       
     fillColor: '#00ff00',
     fillOpacity: 0.9,
-    radius: 10
-    }).bindPopup('El Grau - Travel Harbour and Marina').addTo();
+    radius: 10,
+    }).bindPopup('El Grau - Travel Harbour and Marina');
+
     var airport = L.circleMarker([39.491411, -0.477013],
     {
         color: '#ffffff',       
@@ -106,7 +107,7 @@ function init () {      //init function
     radius: 10
     }).bindPopup('Manises Airport');
     
-    var transport = L.layerGroup([railway,harbor, airport]); */
+    var transport = L.layerGroup([railway,harbor, airport]);
     
     //parameters
     var baseMaps = {
@@ -123,8 +124,8 @@ function init () {      //init function
     };
     var overlayMaps = {
         "Safecast": SafeCast,
-       // "Points of Interest" : townLandmarks,
-        //"Transportation" : transport
+        "Points of Interest" : townLandmarks,
+        "Transportation" : transport
     };
 
     controlCapas = L.control.layers(baseMaps, overlayMaps, {collapsed:true}).addTo(map);
