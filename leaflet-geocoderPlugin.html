@@ -9,11 +9,28 @@
       <meta name="robots" content="index,follow">
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
       <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/css/styles.css">
+        <!-- OSMRecorder src URLs for JS and CSS -->
+        <script src="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.js"></script>
+        <link rel="stylesheet" href="https://rawgit.com/k4r573n/leaflet-control-osm-geocoder/master/Control.OSMGeocoder.css" />
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet" >
+        <link rel="stylesheet" href="/css/styles.css"/>
+
+        <!-- locate.control plugin URLs; must remove @[VERSION] -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+       
+        <!--  
+        <link rel="stylesheet" href="src/L.Control.Locate.mapbox.scss" /> 
+        <link rel="stylesheet" href="src/L.Control.Locate.scss" /> 
+        <script src="src/L.Control.Locate.js"></script>
+        -->
+
         <script src="js/plugin.js"></script>
+
         
     </head>
     <body onload="init()" > <!-- exec of Leafflet map -->
@@ -22,7 +39,7 @@
                 <div>
                 <h2>Leaflet - Geocoding</h2>
                
-                    <p>A map with geocoding and geolocation capabilities for the user to apply</p>
+                    <p>A map with geocoding and geolocation tools for searching </p>
                 </div>
                 <div>
                     <ul class="breadcrumb">

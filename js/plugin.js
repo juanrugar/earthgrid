@@ -1,5 +1,6 @@
 
 var map, layer1;
+
 function init() {
 
     //map object instantation 
@@ -16,8 +17,13 @@ function init() {
     }).addTo(map);
 
     //variable to instantiate the Leaflet plugin 
-    var osmGeocoder = new L.Control.osmGeocoder({placeholder: 'search location...'});
+    var osmGeocoder = new L.Control.OSMGeocoder({placeholder : 'search location...'});
     map.addControl(osmGeocoder);
 
+    var LocateControl = L.control.locate({
+        position : 'topleft'        
+    }).addTo(map);
 
-}
+    controlEscala = L.control.scale().addTo(map);
+
+};
