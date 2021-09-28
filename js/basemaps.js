@@ -132,11 +132,5 @@ function init () {      //init function
 
     controlEscala = L.control.scale().addTo(map);
 
-   
-
-    
-    
-
-    
 
 };
